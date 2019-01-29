@@ -48,6 +48,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     // http://localhost:8080 로 요청이 오면 /list로 리다이렉트
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("redirect:/list");
+        registry.addViewController("/").setViewName("redirect:/board");
     }
 }
