@@ -30,12 +30,12 @@
     <c:choose>
         <c:when test="${sessionScope.logininfo != null}">
             <div style="margin-left: 15% "><b>${sessionScope.logininfo.nickname}</b>님 환영합니다.</div>
-            <a class="btn btn-default" href="/write"  style='width:10%; float:right;'>글쓰기</a>
+            <a class="btn btn-default" href="/writeform"  style='width:10%; float:right;'>글쓰기</a>
             <a class="btn btn-default" href="/logout" style='width:10%; float:right;'>로그아웃</a>
         </c:when>
         <c:when test="${sessionScope.logininfo == null}">
-            <a class="btn btn-default" href="/userjoin" style='width:10%; float:right;'>회원가입</a>
-            <a class="btn btn-default" href="/login" style='width:10%; float:right;'>로그인</a></c:when>
+            <a class="btn btn-default" href="/joinform" style='width:10%; float:right;'>회원가입</a>
+            <a class="btn btn-default" href="/loginform" style='width:10%; float:right;'>로그인</a></c:when>
         <c:otherwise>위조건이외의 실행</c:otherwise>
     </c:choose>
 

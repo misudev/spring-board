@@ -1,5 +1,8 @@
 package my.spring.board;
 
+import lombok.ToString;
+
+@ToString
 public class Paging {
     private final static int BLOCK_SIZE = 10;
     private final static int SIZE = 5;
@@ -59,14 +62,6 @@ public class Paging {
         return start;
     }
 
-    @Override
-    public String toString() {
-        return "Paging{" +
-                "blockStartNum=" + blockStartNum +
-                ", blockLastNum=" + blockLastNum +
-                ", lastPageNum=" + lastPageNum +
-                '}';
-    }
 
     /*
     public void makeLastPageNum(long boardCount){

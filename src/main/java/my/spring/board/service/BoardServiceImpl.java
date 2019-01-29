@@ -34,6 +34,7 @@ public class BoardServiceImpl implements  BoardService {
     }
 
     @Override
+    @Transactional
     public void deleteBoard(Long id, Long sigendId) {
         Board board = boardDao.selectBoardById(id);
         // 유저가 작성한 글이 아니면 삭제X
@@ -51,6 +52,7 @@ public class BoardServiceImpl implements  BoardService {
     }
 //원글 달기...
     @Override
+    @Transactional
     public void addBoard(Board board) {
         board.setThread(boardDao.getMaxThread()*100 + 100); // Thread값 구하기.
         boardDao.updateMaxThread(); //  MaxThread + 1
@@ -59,6 +61,7 @@ public class BoardServiceImpl implements  BoardService {
     }
 //답글 달기...
     @Override
+    @Transactional
     public void addReply(long parentId, Board board) {
         Board parentBoard = boardDao.selectBoardById(parentId);
         board.setThread(parentBoard.getThread() - 1);
@@ -68,6 +71,7 @@ public class BoardServiceImpl implements  BoardService {
     }
 
     @Override
+    @Transactional
     public void updateBoard(Board board) {
         boardDao.updateBoard(board.getTitle(), board.getContent(), board.getId());
     }

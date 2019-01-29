@@ -70,10 +70,12 @@ public class BoardDaoImpl implements BoardDao {
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("thread",board.getThread());
         paramMap.put("depth",board.getDepth());
-        paramMap.put("userId", board.getUserId());
+        paramMap.put("user_id", board.getUserId());
         paramMap.put("nickname", board.getNickname());
         paramMap.put("title", board.getTitle());
         paramMap.put("content", board.getTitle());
+        paramMap.put("regdate", board.getRegdate());
+        paramMap.put("read_count", board.getReadCount());
         Number number = simpleJdbcInsert.executeAndReturnKey(paramMap);
         return number.longValue();
     }

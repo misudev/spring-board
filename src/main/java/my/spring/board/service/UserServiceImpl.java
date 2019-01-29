@@ -26,6 +26,7 @@ public class UserServiceImpl implements UserService{
     // RuntimeException이 발생하면 rollback (Checked Exception은 rollback과 상관이 없다..)
     // 성공하면 commit 한다.
     @Override
+    @Transactional
     public User addUser(User user) {
         long id = userDao.addUser(user);
 
