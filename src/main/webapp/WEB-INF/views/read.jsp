@@ -10,7 +10,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link href="/read.css" type="text/css" rel="stylesheet">
+    <link href="css/read.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
     <link href="bs/css/bootstrap.min.css" rel="stylesheet">

@@ -1,0 +1,105 @@
+*{margin:0; padding:0; box-sizing:border-box;}
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+	a {text-decoration:none; color:#000;}
+	img{vertical-align:bottom;}
+	ul {list-style-position:inside;}
+	ul li{list-style:none;}
+
+body{font-family: 'Nanum Gothic', sans-serif;
+	font-size:0.8em;}
+
+div#wrap{width:100%; margin:0 auto;}
+
+
+/*********************form*****************************/
+
+h2 {
+	margin-left:5%; margin-top:1%;
+}
+
+
+div.info{width:55%; margin:0 auto;
+	border:1px solid #e1e1e1;
+	box-sizing:border-box;
+	margin-top:5%;
+	padding:2%;
+	margin-bottom:100px;}
+
+hr{margin:20px 0;}
+
+div.bord{margin:5% 0; border-top:2px solid #c2c2c2; }
+
+fieldset{border:0; }
+legend{display:none;}
+
+form ul li{overflow:hidden; margin:2% 0;}
+
+label{width:15%;
+	float:left; font-size:1.2em;
+	font-weight:bold;
+	padding:1.2% 0;}
+
+input{width:30%; padding:.9% 0; border:0; border-bottom:1px solid #999;}
+
+
+select{width:15%; padding:.5% 0; border:0; border-bottom:1px solid #999;}
+
+fieldset#sec{margin:3% 0; padding-left:10%;}
+fieldset#sec input{vertical-align:top; padding-left:10px;}
+
+
+
+
+
+/**********버튼**************************************************************/
+div.bt {
+
+	box-sizing:border-box;
+	overflow:hidden;
+	margin:0 auto;
+	width:50%;
+	}
+
+div.button, #btnjoin {
+
+	width: 45%;
+	height:60px;
+	float:left;
+	text-align:center;
+	line-height:60px;
+	margin-top:50px;
+	margin-bottom:20px;
+
+	}
+
+div.before {
+	border:1px solid #666;
+	margin-right:20px;
+	box-sizing:border-box;
+}
+div.before a{color: #666;}
+
+
+div.bt #btnjoin {
+	border:1px solid #666;
+	background:#666;
+	box-sizing:border-box;
+	margin-left:3%;
+	color:#fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

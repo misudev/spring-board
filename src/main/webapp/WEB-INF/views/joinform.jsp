@@ -17,7 +17,7 @@
 
     <title>회원가입</title>
 
-    <link rel="stylesheet" type="text/css" href="/join.css">
+    <link href="css/join.css" rel="stylesheet" type="text/css" >
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="js/brand.js"></script>
 

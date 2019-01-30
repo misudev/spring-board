@@ -29,6 +29,8 @@
     <div class="content">
         <form action="/reply" method="post">
         <input type="hidden" id="parent-id" name="parent-id" value="${board.id}">
+        <input type="hidden" id="userId" name="userId" value="${sessionScope.logininfo.id}">
+            <input type="hidden" id="nickname" name="nickname" value="${sessionScope.logininfo.nickname}">
 
         <div class="form-group">
             <label for="title">제목:</label>

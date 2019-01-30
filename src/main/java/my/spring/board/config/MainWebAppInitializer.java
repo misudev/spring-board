@@ -1,5 +1,6 @@
 package my.spring.board.config;
 
+import my.spring.board.filter.SecurityFilter;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

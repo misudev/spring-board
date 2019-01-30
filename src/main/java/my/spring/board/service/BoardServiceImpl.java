@@ -17,14 +17,20 @@ public class BoardServiceImpl implements  BoardService {
     }
     @Override
     @Transactional(readOnly = true)
-    public List<Board> getBoards(int page) {
-        return boardDao.selectAll();
+    public List<Board> getBoards(int start, int limit) {
+        return boardDao.selectBoardByPaging(start, limit);
     }
 
     @Override
     @Transactional(readOnly = true)
     public Board getBoard(Long id) {
         return boardDao.selectBoardById(id);
+    }
+
+    @Override
+    @Transactional
+    public void updateReadCount(Long id){
+        boardDao.updateReadCount(id);
     }
 
     @Override

@@ -58,6 +58,10 @@ public class Paging {
 
     }
 
+    public static int getSIZE() {
+        return SIZE;
+    }
+
     public int getStart() {
         return start;
     }
