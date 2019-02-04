@@ -119,8 +119,11 @@ public class BoardDaoImpl implements BoardDao {
 
     @Override
     public boolean existReply(long thread) {
-        Map emptyMap = Collections.emptyMap();
-        int result = jdbc.queryForObject(EXIST_BY_THREAD, emptyMap, Integer.class);
+        // 맨 마지막 답글인 경우 -- 답글 존재 X
+        if(thread%100 == 1) return false;
+        // thread - 1 , 하위답글이 존재하는지 확인
+        Map<String, Object>paramMap = Collections.singletonMap("thread", thread - 1);
+        int result = jdbc.queryForObject(EXIST_BY_THREAD, paramMap, Integer.class);
         return result == 1 ? true : false;
     }
 

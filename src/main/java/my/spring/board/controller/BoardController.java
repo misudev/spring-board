@@ -108,8 +108,15 @@ public class BoardController {
 
     @PostMapping("/reply")
     public String reply(@ModelAttribute Board board,
-                        @RequestParam(name = "parent-id")long parentId){
+                        @RequestParam(name = "parent-id")long parentId) {
         boardService.addReply(parentId, board);
+        return "redirect:/board";
+    }
+
+    @GetMapping("/delete")
+    public String delete(@RequestParam(name = "id")long id, HttpSession httpSession, Model model){
+        User loginedUser = (User) httpSession.getAttribute("logininfo");
+        boardService.deleteBoard(id,loginedUser.getId());
         return "redirect:/board";
     }
 }
